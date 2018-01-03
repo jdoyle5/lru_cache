@@ -7,7 +7,7 @@ class MaxIntSet
     if is_valid?(num)
       @store[num] = true
     else
-      raise ArgumentError("Out of bounds")
+      raise ArgumentError.new("Out of bounds")
     end
   end
 
