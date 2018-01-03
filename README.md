@@ -360,19 +360,19 @@ And you did it! Congratulations!
 [lru-cache]: http://mcicpc.cs.atu.edu/archives/2012/mcpc2012/lru/lru.html
 
 ## Phase 7: Practical Problem
-Let's now do a problem that's more similar to what you'll be seeing in 
+Let's now do a problem that's more similar to what you'll be seeing in
 interviews. It might be one that you've already seen before, but the main idea
 is to try and use one of the data structures that you just built up!
 
 ### Problem
-Write a method to test whether the letters forming  a string can be 
+Write a method to test whether the letters forming  a string can be
 permuted to form a palindrome. For example, "edified" can be permute to form
-"deified". 
+"deified".
 
 ### Approach
-You've probably realized that we should use a hash map here. Use the hash map 
+You've probably realized that we should use a hash map here. Use the hash map
 class that you implemented! This time, when you're setting and getting, picture
-in your mind what's goin on under the hood within the hashmap. 
+in your mind what's goin on under the hood within the hashmap.
 
-For example, whenever you set a key-value pair, picture all the specific 
+For example, whenever you set a key-value pair, picture all the specific
 processes that's happening to the inputs.
