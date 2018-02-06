@@ -144,6 +144,7 @@ Write hash functions for `Array`, `String`, and `Hash`. Build these up sequentia
     Ex. `[1, 2, 3].hash == [3, 2, 1].hash # => false`
   - On the other hand, ordering is **not** to be considered with a `Hash`. Hashes are based
     on sets and have no fixed order. Ex. `{a: 1, b: 2}.hash == {b: 2, a: 1}.hash # => true`
+  - We want to use the array hash in the string hash setup and we will use both of the hashing functions for the hash setup
 
 ### Hints:
   - Can you write `String#hash` in terms of `Array#hash`?
