@@ -5,7 +5,7 @@ end
 
 class Array
   def hash
-    self.each_with_index.inject(0) do | accumulator, (el, i) |
+    self.each_with_index.inject(0) do |accumulator, (el, i)|
       (el.hash + i.hash) ^ accumulator
     end
   end
