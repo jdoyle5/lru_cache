@@ -16,7 +16,9 @@ class Node
     # optional but useful, connects previous node to next node
     # and removes self from list.
     @next.prev = @prev
-    @prec.next = @next
+    @prev.next = @next
+    @prev = nil
+    @next = nil
   end
 end
 
