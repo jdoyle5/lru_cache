@@ -19,6 +19,7 @@ class Node
     @prev.next = @next
     @prev = nil
     @next = nil
+    self
   end
 end
 
@@ -57,7 +58,13 @@ class LinkedList
 
   def append(key, val)
     node = Node.new(key, val)
-    
+    if last
+      last.next = node
+      @tail.prev = node
+    else
+      @head.next = node
+      @tail.prev = node
+    end
   end
 
   def update(key, val)
