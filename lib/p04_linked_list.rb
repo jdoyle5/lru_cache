@@ -82,10 +82,19 @@ class LinkedList
   end
 
   def remove(key)
+    each do |node|
+      if node.key == key
+        node.prev.next = node.next
+        node.next.prev = node.prev
+        node.prev = nil
+        node.next = nil
+      end
+    end
+    nil
   end
 
   def each
-    current_node = @head
+    current_node = @head.next
     until current_node == @tail
       yield current_node
       current_node = current_node.next
