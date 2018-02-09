@@ -58,22 +58,30 @@ class LinkedList
 
   def append(key, val)
     node = Node.new(key, val)
-    if last
-      last.next = node
-      @tail.prev = node
-    else
-      @head.next = node
-      @tail.prev = node
-    end
+
+    @tail.prev.next = node
+    node.prev = @tail.prev
+    @tail.prev = node
+    node.next = @tail
+
+    node
   end
 
   def update(key, val)
+    each do |node|
+      
+    end
   end
 
   def remove(key)
   end
 
   def each
+    current_node = @head
+    until current_node == @tail
+      yield current_node
+      current_node = current_node.next
+    end
   end
 
   # uncomment when you have `each` working and `Enumerable` included
