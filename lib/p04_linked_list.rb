@@ -69,8 +69,12 @@ class LinkedList
 
   def update(key, val)
     each do |node|
-      
+      if node.key == key
+        node.val = val
+        return node
+      end
     end
+
   end
 
   def remove(key)
