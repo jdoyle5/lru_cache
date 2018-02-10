@@ -58,6 +58,10 @@ class LinkedList
   end
 
   def include?(key)
+    each do |node|
+      return true if node.key == key
+    end
+    false
   end
 
   def append(key, val)
