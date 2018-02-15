@@ -88,10 +88,8 @@ class LinkedList
   def remove(key)
     each do |node|
       if node.key == key
-        node.prev.next = node.next
-        node.next.prev = node.prev
-        node.prev = nil
-        node.next = nil
+        node.remove
+        return node
       end
     end
     nil
@@ -105,8 +103,8 @@ class LinkedList
     end
   end
 
-  # uncomment when you have `each` working and `Enumerable` included
-  # def to_s
-  #   inject([]) { |acc, node| acc << "[#{node.key}, #{node.val}]" }.join(", ")
-  # end
+  uncomment when you have `each` working and `Enumerable` included
+  def to_s
+    inject([]) { |acc, node| acc << "[#{node.key}, #{node.val}]" }.join(", ")
+  end
 end
