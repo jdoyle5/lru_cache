@@ -10,9 +10,11 @@ class HashMap
   end
 
   def include?(key)
+
   end
 
   def set(key, val)
+    bucket(key).append(key.hash, val)
   end
 
   def get(key)
@@ -42,9 +44,13 @@ class HashMap
   end
 
   def resize!
+    old_store = @store
+    @count = 0
+    @store = Array.new(num_buckets * 2) { LinkedList.new }
+
   end
 
   def bucket(key)
-    # optional but useful; return the bucket corresponding to `key`
+    @store[key.hash % num_buckets]
   end
 end
