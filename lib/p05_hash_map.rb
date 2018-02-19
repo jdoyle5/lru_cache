@@ -14,7 +14,7 @@ class HashMap
   end
 
   def set(key, val)
-    bucket(key).append(key.hash, val)
+    
   end
 
   def get(key)
@@ -47,7 +47,9 @@ class HashMap
     old_store = @store
     @count = 0
     @store = Array.new(num_buckets * 2) { LinkedList.new }
-
+    old_store.each do |bucket|
+      bucket.each {|node| }
+    end
   end
 
   def bucket(key)
